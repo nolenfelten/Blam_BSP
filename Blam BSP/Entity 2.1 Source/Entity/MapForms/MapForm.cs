@@ -2966,7 +2966,7 @@ namespace entity.MapForms
         }
 
         /// <summary>
-        /// The load bsp.
+        /// The load bsp. The BSP is loaded into memory.
         /// </summary>
         /// <param name="BSPNum">The bsp num.</param>
         /// <remarks></remarks>
@@ -4039,7 +4039,7 @@ namespace entity.MapForms
         }
 
         /// <summary>
-        /// The tool strip bsp editor_ click.
+        /// The tool strip bsp editor_ click. This is where BSP loading starts.
         /// </summary>
         /// <param name="sender">The sender.</param>
         /// <param name="e">The e.</param>
