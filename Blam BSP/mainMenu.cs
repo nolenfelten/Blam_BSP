@@ -21,5 +21,10 @@ namespace Blam_BSP
         {
             MessageBox.Show("Load BSP");
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
