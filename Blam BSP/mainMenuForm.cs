@@ -19,14 +19,7 @@ namespace Blam_BSP
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("lol");
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            MessageBox.Show("lol2");
+            MessageBox.Show("Load BSP");
         }
     }
-    
-
 }
