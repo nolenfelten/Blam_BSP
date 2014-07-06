@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Blam_BSP
 {
-    public partial class mainMenuForm : Form
+    public partial class mainMenu : Form
     {
-        public mainMenuForm()
+        public mainMenu()
         {
             InitializeComponent();
         }

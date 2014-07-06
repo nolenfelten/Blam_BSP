@@ -44,16 +44,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="mainMenuForm.cs">
+    <Compile Include="bspViewer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="mainMenuForm.Designer.cs">
-      <DependentUpon>mainMenuForm.cs</DependentUpon>
+    <Compile Include="bspViewer.Designer.cs">
+      <DependentUpon>bspViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainMenu.Designer.cs">
+      <DependentUpon>mainMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="mainMenuForm.resx">
-      <DependentUpon>mainMenuForm.cs</DependentUpon>
+    <EmbeddedResource Include="bspViewer.resx">
+      <DependentUpon>bspViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainMenu.resx">
+      <DependentUpon>mainMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

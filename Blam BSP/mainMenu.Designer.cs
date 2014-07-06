@@ -1,6 +1,6 @@
 ﻿namespace Blam_BSP
 {
-    partial class mainMenuForm
+    partial class mainMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("[sbsp] - Structure Binary Separation Plane");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("[sbsp] - Structure Binary Separation Plane");
             this.loadBSPButton = new System.Windows.Forms.Button();
-            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.sbspTree = new System.Windows.Forms.TreeView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,18 +50,18 @@
             this.loadBSPButton.UseVisualStyleBackColor = true;
             this.loadBSPButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // treeView1
+            // sbspTree
             // 
-            this.treeView1.Location = new System.Drawing.Point(12, 27);
-            this.treeView1.Name = "treeView1";
-            treeNode2.Checked = true;
-            treeNode2.Name = "mapSBSPRoot";
-            treeNode2.Tag = "sbsp";
-            treeNode2.Text = "[sbsp] - Structure Binary Separation Plane";
-            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode2});
-            this.treeView1.Size = new System.Drawing.Size(260, 185);
-            this.treeView1.TabIndex = 1;
+            this.sbspTree.Location = new System.Drawing.Point(12, 27);
+            this.sbspTree.Name = "sbspTree";
+            treeNode1.Checked = true;
+            treeNode1.Name = "mapSBSPRoot";
+            treeNode1.Tag = "sbsp";
+            treeNode1.Text = "[sbsp] - Structure Binary Separation Plane";
+            this.sbspTree.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode1});
+            this.sbspTree.Size = new System.Drawing.Size(260, 185);
+            this.sbspTree.TabIndex = 1;
             // 
             // menuStrip1
             // 
@@ -106,7 +106,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
-            this.Controls.Add(this.treeView1);
+            this.Controls.Add(this.sbspTree);
             this.Controls.Add(this.loadBSPButton);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
@@ -114,7 +114,7 @@
             this.MaximizeBox = false;
             this.Name = "mainMenuForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "Blam BSP | Select a BSP";
+            this.Text = "Blam BSP | Select a Map";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -125,7 +125,7 @@
         #endregion
 
         private System.Windows.Forms.Button loadBSPButton;
-        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.TreeView sbspTree;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openMapToolStripMenuItem;
