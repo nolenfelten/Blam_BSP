@@ -32,5 +32,11 @@ namespace Blam_BSP
         {
 
         }
+
+        private void configurationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            configEditor updateConfig = new configEditor();
+            updateConfig.ShowDialog();
+        }
     }
 }

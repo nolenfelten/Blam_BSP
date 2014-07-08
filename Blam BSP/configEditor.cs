@@ -16,43 +16,93 @@ namespace Blam_BSP
         {
             InitializeComponent();
             mainMenuPathTextBox.Text = System.Configuration.ConfigurationSettings.AppSettings["main_menu_path"];
-            singlePlayerSharedPath.Text = System.Configuration.ConfigurationSettings.AppSettings["sp_shared_path"];
+            singlePlayerSharedPathTextBox.Text = System.Configuration.ConfigurationSettings.AppSettings["sp_shared_path"];
             multiplayerSharedPathTextBox.Text = System.Configuration.ConfigurationSettings.AppSettings["mp_shared_path"];
         }    
 
         private void loadMainMenuButton_Click(object sender, EventArgs e)
         {
+            // Create an instance of the open file dialog box.
+            OpenFileDialog loadMainMenuDialog = new OpenFileDialog();
 
+            // Set filter options and filter index.
+            loadMainMenuDialog.Filter = "Halo 2 Main Menu (.map)|mainmenu.map";
+            loadMainMenuDialog.FilterIndex = 1;
+
+            loadMainMenuDialog.Multiselect = false;
+
+            // Process input if the user clicked OK.
+            if (loadMainMenuDialog.ShowDialog() == DialogResult.OK)
+            {
+                // Set the selected setting's text field to the file's path.
+                mainMenuPathTextBox.Text = loadMainMenuDialog.FileName;
+            }
         }
 
         private void loadSinglePlayerSharedButton_Click(object sender, EventArgs e)
         {
+            // Create an instance of the open file dialog box.
+            OpenFileDialog loadSinglePlayerSharedDialog = new OpenFileDialog();
 
+            // Set filter options and filter index.
+            loadSinglePlayerSharedDialog.Filter = "Halo 2 SP Shared (.map)|single_player_shared.map";
+            loadSinglePlayerSharedDialog.FilterIndex = 1;
+
+            loadSinglePlayerSharedDialog.Multiselect = false;
+
+            // Process input if the user clicked OK.
+            if (loadSinglePlayerSharedDialog.ShowDialog() == DialogResult.OK)
+            {
+                // Set the selected setting's text field to the file's path.
+                singlePlayerSharedPathTextBox.Text = loadSinglePlayerSharedDialog.FileName;
+            }
         }
 
-        private void loadMultiplayerSharedMap_Click(object sender, EventArgs e)
+        private void loadMultiplayerSharedMapButton_Click(object sender, EventArgs e)
         {
+            // Create an instance of the open file dialog box.
+            OpenFileDialog loadMultiplayerSharedDialog = new OpenFileDialog();
 
+            // Set filter options and filter index.
+            loadMultiplayerSharedDialog.Filter = "Halo 2 Shared (.map)|shared.map";
+            loadMultiplayerSharedDialog.FilterIndex = 1;
+
+            loadMultiplayerSharedDialog.Multiselect = false;
+
+            // Process input if the user clicked OK.
+            if (loadMultiplayerSharedDialog.ShowDialog() == DialogResult.OK)
+            {
+                // Set the selected setting's text field to the file's path.
+                multiplayerSharedPathTextBox.Text = loadMultiplayerSharedDialog.FileName;
+            }
         }
 
-        private void saveConfig_Click(object sender, EventArgs e)
+        private void saveConfigButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(mainMenuPathTextBox.Text);
-            if(String.Compare(mainMenuPathTextBox.Text, "") != 0 || String.Compare(singlePlayerSharedPath.Text, "") != 0 || String.Compare(multiplayerSharedPathTextBox.Text, "") != 0)
+            if(String.Compare(mainMenuPathTextBox.Text, "") != 0 || String.Compare(singlePlayerSharedPathTextBox.Text, "") != 0 || String.Compare(multiplayerSharedPathTextBox.Text, "") != 0)
             {
                 System.Configuration.ConfigurationSettings.AppSettings["main_menu_path"] = mainMenuPathTextBox.Text;
-                System.Configuration.ConfigurationSettings.AppSettings["sp_shared_path"] = singlePlayerSharedPath.Text;
+                System.Configuration.ConfigurationSettings.AppSettings["sp_shared_path"] = singlePlayerSharedPathTextBox.Text;
                 System.Configuration.ConfigurationSettings.AppSettings["mp_shared_path"] = multiplayerSharedPathTextBox.Text;
             }
             else
             {
-                MessageBox.Show("You are an idiot.");
+                MessageBox.Show("Please select valid file locations for the specified Halo 2 internal maps.");
             }
         }
 
-        private void cancelConfiguration_Click(object sender, EventArgs e)
+        private void cancelConfigurationButton_Click(object sender, EventArgs e)
         {
-
+            if (String.Compare(mainMenuPathTextBox.Text, "") != 0 || String.Compare(singlePlayerSharedPathTextBox.Text, "") != 0 || String.Compare(multiplayerSharedPathTextBox.Text, "") != 0)
+            {
+                System.Configuration.ConfigurationSettings.AppSettings["main_menu_path"] = mainMenuPathTextBox.Text;
+                System.Configuration.ConfigurationSettings.AppSettings["sp_shared_path"] = singlePlayerSharedPathTextBox.Text;
+                System.Configuration.ConfigurationSettings.AppSettings["mp_shared_path"] = multiplayerSharedPathTextBox.Text;
+            }
+            else
+            {
+                MessageBox.Show("Please select valid file locations for the specified Halo 2 internal maps.");
+            }
         }
     }
 }

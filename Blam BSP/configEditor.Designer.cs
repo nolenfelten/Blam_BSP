@@ -32,13 +32,13 @@
             this.singlePlayerSharedPathLabel = new System.Windows.Forms.Label();
             this.multiplayerSharedMapPathLabel = new System.Windows.Forms.Label();
             this.mainMenuPathTextBox = new System.Windows.Forms.TextBox();
-            this.singlePlayerSharedPath = new System.Windows.Forms.TextBox();
+            this.singlePlayerSharedPathTextBox = new System.Windows.Forms.TextBox();
             this.multiplayerSharedPathTextBox = new System.Windows.Forms.TextBox();
-            this.saveConfig = new System.Windows.Forms.Button();
+            this.saveConfigButton = new System.Windows.Forms.Button();
             this.loadMainMenuButton = new System.Windows.Forms.Button();
             this.loadSinglePlayerSharedButton = new System.Windows.Forms.Button();
-            this.loadMultiplayerSharedMap = new System.Windows.Forms.Button();
-            this.cancelConfiguration = new System.Windows.Forms.Button();
+            this.loadMultiplayerSharedMapButton = new System.Windows.Forms.Button();
+            this.cancelConfigurationButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // mainMenuPathLabel
@@ -64,9 +64,9 @@
             this.multiplayerSharedMapPathLabel.AutoSize = true;
             this.multiplayerSharedMapPathLabel.Location = new System.Drawing.Point(12, 87);
             this.multiplayerSharedMapPathLabel.Name = "multiplayerSharedMapPathLabel";
-            this.multiplayerSharedMapPathLabel.Size = new System.Drawing.Size(122, 13);
+            this.multiplayerSharedMapPathLabel.Size = new System.Drawing.Size(69, 13);
             this.multiplayerSharedMapPathLabel.TabIndex = 0;
-            this.multiplayerSharedMapPathLabel.Text = "Multiplayer Shared Path:";
+            this.multiplayerSharedMapPathLabel.Text = "Shared Path:";
             // 
             // mainMenuPathTextBox
             // 
@@ -76,13 +76,13 @@
             this.mainMenuPathTextBox.Size = new System.Drawing.Size(395, 20);
             this.mainMenuPathTextBox.TabIndex = 1;
             // 
-            // singlePlayerSharedPath
+            // singlePlayerSharedPathTextBox
             // 
-            this.singlePlayerSharedPath.Location = new System.Drawing.Point(16, 64);
-            this.singlePlayerSharedPath.Name = "singlePlayerSharedPath";
-            this.singlePlayerSharedPath.ReadOnly = true;
-            this.singlePlayerSharedPath.Size = new System.Drawing.Size(394, 20);
-            this.singlePlayerSharedPath.TabIndex = 1;
+            this.singlePlayerSharedPathTextBox.Location = new System.Drawing.Point(16, 64);
+            this.singlePlayerSharedPathTextBox.Name = "singlePlayerSharedPathTextBox";
+            this.singlePlayerSharedPathTextBox.ReadOnly = true;
+            this.singlePlayerSharedPathTextBox.Size = new System.Drawing.Size(394, 20);
+            this.singlePlayerSharedPathTextBox.TabIndex = 1;
             // 
             // multiplayerSharedPathTextBox
             // 
@@ -92,15 +92,15 @@
             this.multiplayerSharedPathTextBox.Size = new System.Drawing.Size(394, 20);
             this.multiplayerSharedPathTextBox.TabIndex = 1;
             // 
-            // saveConfig
+            // saveConfigButton
             // 
-            this.saveConfig.Location = new System.Drawing.Point(15, 136);
-            this.saveConfig.Name = "saveConfig";
-            this.saveConfig.Size = new System.Drawing.Size(220, 31);
-            this.saveConfig.TabIndex = 2;
-            this.saveConfig.Text = "Save Configuration";
-            this.saveConfig.UseVisualStyleBackColor = true;
-            this.saveConfig.Click += new System.EventHandler(this.saveConfig_Click);
+            this.saveConfigButton.Location = new System.Drawing.Point(15, 136);
+            this.saveConfigButton.Name = "saveConfigButton";
+            this.saveConfigButton.Size = new System.Drawing.Size(220, 31);
+            this.saveConfigButton.TabIndex = 2;
+            this.saveConfigButton.Text = "Save Configuration";
+            this.saveConfigButton.UseVisualStyleBackColor = true;
+            this.saveConfigButton.Click += new System.EventHandler(this.saveConfigButton_Click);
             // 
             // loadMainMenuButton
             // 
@@ -122,41 +122,39 @@
             this.loadSinglePlayerSharedButton.UseVisualStyleBackColor = true;
             this.loadSinglePlayerSharedButton.Click += new System.EventHandler(this.loadSinglePlayerSharedButton_Click);
             // 
-            // loadMultiplayerSharedMap
+            // loadMultiplayerSharedMapButton
             // 
-            this.loadMultiplayerSharedMap.Location = new System.Drawing.Point(416, 103);
-            this.loadMultiplayerSharedMap.Name = "loadMultiplayerSharedMap";
-            this.loadMultiplayerSharedMap.Size = new System.Drawing.Size(75, 20);
-            this.loadMultiplayerSharedMap.TabIndex = 3;
-            this.loadMultiplayerSharedMap.Text = "Select...";
-            this.loadMultiplayerSharedMap.UseVisualStyleBackColor = true;
-            this.loadMultiplayerSharedMap.Click += new System.EventHandler(this.loadMultiplayerSharedMap_Click);
+            this.loadMultiplayerSharedMapButton.Location = new System.Drawing.Point(416, 103);
+            this.loadMultiplayerSharedMapButton.Name = "loadMultiplayerSharedMapButton";
+            this.loadMultiplayerSharedMapButton.Size = new System.Drawing.Size(75, 20);
+            this.loadMultiplayerSharedMapButton.TabIndex = 3;
+            this.loadMultiplayerSharedMapButton.Text = "Select...";
+            this.loadMultiplayerSharedMapButton.UseVisualStyleBackColor = true;
+            this.loadMultiplayerSharedMapButton.Click += new System.EventHandler(this.loadMultiplayerSharedMapButton_Click);
             // 
-            // cancelConfiguration
+            // cancelConfigurationButton
             // 
-            this.cancelConfiguration.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelConfiguration.Location = new System.Drawing.Point(271, 136);
-            this.cancelConfiguration.Name = "cancelConfiguration";
-            this.cancelConfiguration.Size = new System.Drawing.Size(220, 31);
-            this.cancelConfiguration.TabIndex = 2;
-            this.cancelConfiguration.Text = "Cancel";
-            this.cancelConfiguration.UseVisualStyleBackColor = true;
-            this.cancelConfiguration.Click += new System.EventHandler(this.cancelConfiguration_Click);
+            this.cancelConfigurationButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.cancelConfigurationButton.Location = new System.Drawing.Point(271, 136);
+            this.cancelConfigurationButton.Name = "cancelConfigurationButton";
+            this.cancelConfigurationButton.Size = new System.Drawing.Size(220, 31);
+            this.cancelConfigurationButton.TabIndex = 2;
+            this.cancelConfigurationButton.Text = "Cancel";
+            this.cancelConfigurationButton.UseVisualStyleBackColor = true;
+            this.cancelConfigurationButton.Click += new System.EventHandler(this.cancelConfigurationButton_Click);
             // 
             // configEditor
             // 
-            this.AcceptButton = this.saveConfig;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.cancelConfiguration;
             this.ClientSize = new System.Drawing.Size(504, 180);
-            this.Controls.Add(this.loadMultiplayerSharedMap);
+            this.Controls.Add(this.loadMultiplayerSharedMapButton);
             this.Controls.Add(this.loadSinglePlayerSharedButton);
             this.Controls.Add(this.loadMainMenuButton);
-            this.Controls.Add(this.cancelConfiguration);
-            this.Controls.Add(this.saveConfig);
+            this.Controls.Add(this.cancelConfigurationButton);
+            this.Controls.Add(this.saveConfigButton);
             this.Controls.Add(this.multiplayerSharedPathTextBox);
-            this.Controls.Add(this.singlePlayerSharedPath);
+            this.Controls.Add(this.singlePlayerSharedPathTextBox);
             this.Controls.Add(this.mainMenuPathTextBox);
             this.Controls.Add(this.multiplayerSharedMapPathLabel);
             this.Controls.Add(this.singlePlayerSharedPathLabel);
@@ -176,12 +174,12 @@
         private System.Windows.Forms.Label singlePlayerSharedPathLabel;
         private System.Windows.Forms.Label multiplayerSharedMapPathLabel;
         private System.Windows.Forms.TextBox mainMenuPathTextBox;
-        private System.Windows.Forms.TextBox singlePlayerSharedPath;
+        private System.Windows.Forms.TextBox singlePlayerSharedPathTextBox;
         private System.Windows.Forms.TextBox multiplayerSharedPathTextBox;
-        private System.Windows.Forms.Button saveConfig;
+        private System.Windows.Forms.Button saveConfigButton;
         private System.Windows.Forms.Button loadMainMenuButton;
         private System.Windows.Forms.Button loadSinglePlayerSharedButton;
-        private System.Windows.Forms.Button loadMultiplayerSharedMap;
-        private System.Windows.Forms.Button cancelConfiguration;
+        private System.Windows.Forms.Button loadMultiplayerSharedMapButton;
+        private System.Windows.Forms.Button cancelConfigurationButton;
     }
 }
