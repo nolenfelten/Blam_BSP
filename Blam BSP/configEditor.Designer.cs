@@ -100,6 +100,7 @@
             this.saveConfig.TabIndex = 2;
             this.saveConfig.Text = "Save Configuration";
             this.saveConfig.UseVisualStyleBackColor = true;
+            this.saveConfig.Click += new System.EventHandler(this.saveConfig_Click);
             // 
             // loadMainMenuButton
             // 
@@ -109,6 +110,7 @@
             this.loadMainMenuButton.TabIndex = 3;
             this.loadMainMenuButton.Text = "Select...";
             this.loadMainMenuButton.UseVisualStyleBackColor = true;
+            this.loadMainMenuButton.Click += new System.EventHandler(this.loadMainMenuButton_Click);
             // 
             // loadSinglePlayerSharedButton
             // 
@@ -118,29 +120,35 @@
             this.loadSinglePlayerSharedButton.TabIndex = 3;
             this.loadSinglePlayerSharedButton.Text = "Select...";
             this.loadSinglePlayerSharedButton.UseVisualStyleBackColor = true;
+            this.loadSinglePlayerSharedButton.Click += new System.EventHandler(this.loadSinglePlayerSharedButton_Click);
             // 
             // loadMultiplayerSharedMap
             // 
-            this.loadMultiplayerSharedMap.Location = new System.Drawing.Point(416, 102);
+            this.loadMultiplayerSharedMap.Location = new System.Drawing.Point(416, 103);
             this.loadMultiplayerSharedMap.Name = "loadMultiplayerSharedMap";
             this.loadMultiplayerSharedMap.Size = new System.Drawing.Size(75, 20);
             this.loadMultiplayerSharedMap.TabIndex = 3;
             this.loadMultiplayerSharedMap.Text = "Select...";
             this.loadMultiplayerSharedMap.UseVisualStyleBackColor = true;
+            this.loadMultiplayerSharedMap.Click += new System.EventHandler(this.loadMultiplayerSharedMap_Click);
             // 
             // cancelConfiguration
             // 
+            this.cancelConfiguration.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cancelConfiguration.Location = new System.Drawing.Point(271, 136);
             this.cancelConfiguration.Name = "cancelConfiguration";
             this.cancelConfiguration.Size = new System.Drawing.Size(220, 31);
             this.cancelConfiguration.TabIndex = 2;
             this.cancelConfiguration.Text = "Cancel";
             this.cancelConfiguration.UseVisualStyleBackColor = true;
+            this.cancelConfiguration.Click += new System.EventHandler(this.cancelConfiguration_Click);
             // 
             // configEditor
             // 
+            this.AcceptButton = this.saveConfig;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.cancelConfiguration;
             this.ClientSize = new System.Drawing.Size(504, 180);
             this.Controls.Add(this.loadMultiplayerSharedMap);
             this.Controls.Add(this.loadSinglePlayerSharedButton);
