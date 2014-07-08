@@ -50,6 +50,12 @@
     <Compile Include="bspViewer.Designer.cs">
       <DependentUpon>bspViewer.cs</DependentUpon>
     </Compile>
+    <Compile Include="configEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="configEditor.Designer.cs">
+      <DependentUpon>configEditor.cs</DependentUpon>
+    </Compile>
     <Compile Include="mainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="bspViewer.resx">
       <DependentUpon>bspViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configEditor.resx">
+      <DependentUpon>configEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mainMenu.resx">
       <DependentUpon>mainMenu.cs</DependentUpon>
