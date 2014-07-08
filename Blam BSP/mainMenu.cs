@@ -16,7 +16,11 @@ namespace Blam_BSP
         public mainMenu()
         {
             InitializeComponent();
-            if(Compare(System.Configuration.ConfigurationSettings.AppSettings["main_menu_path"],"false") == 0 || System.Configuration.ConfigurationSettings.AppSettings["sp_shared_path"] || System.Configuration.ConfigurationSettings.AppSettings["mp_shared_path"])   
+            //MessageBox.Show(System.Configuration.ConfigurationSettings.AppSettings["main_menu_path"]);
+            if (String.Compare(System.Configuration.ConfigurationSettings.AppSettings["main_menu_path"], "false") == 0 || String.Compare(System.Configuration.ConfigurationSettings.AppSettings["sp_shared_path"], "false") == 0 || String.Compare(System.Configuration.ConfigurationSettings.AppSettings["mp_shared_path"], "false") == 0)
+            {
+                MessageBox.Show("yaya");
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
