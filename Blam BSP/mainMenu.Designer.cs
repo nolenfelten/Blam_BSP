@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("[sbsp] - Structure Binary Separation Plane");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("[sbsp] - Structure Binary Separation Plane");
             this.loadBSPButton = new System.Windows.Forms.Button();
             this.sbspTree = new System.Windows.Forms.TreeView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -37,6 +37,7 @@
             this.closeMapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.configurationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,12 +56,12 @@
             // 
             this.sbspTree.Location = new System.Drawing.Point(12, 27);
             this.sbspTree.Name = "sbspTree";
-            treeNode2.Checked = true;
-            treeNode2.Name = "mapSBSPRoot";
-            treeNode2.Tag = "sbsp";
-            treeNode2.Text = "[sbsp] - Structure Binary Separation Plane";
+            treeNode1.Checked = true;
+            treeNode1.Name = "mapSBSPRoot";
+            treeNode1.Tag = "sbsp";
+            treeNode1.Text = "[sbsp] - Structure Binary Separation Plane";
             this.sbspTree.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode2});
+            treeNode1});
             this.sbspTree.Size = new System.Drawing.Size(260, 185);
             this.sbspTree.TabIndex = 1;
             // 
@@ -88,17 +89,20 @@
             // openMapToolStripMenuItem
             // 
             this.openMapToolStripMenuItem.Name = "openMapToolStripMenuItem";
-            this.openMapToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.openMapToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.openMapToolStripMenuItem.Text = "Open Map";
             // 
             // closeMapToolStripMenuItem
             // 
+            this.closeMapToolStripMenuItem.Enabled = false;
             this.closeMapToolStripMenuItem.Name = "closeMapToolStripMenuItem";
-            this.closeMapToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.closeMapToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.closeMapToolStripMenuItem.Text = "Close Map";
             // 
             // optionsToolStripMenuItem
             // 
+            this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.configurationToolStripMenuItem});
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
             this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.optionsToolStripMenuItem.Text = "Options";
@@ -109,6 +113,12 @@
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.aboutToolStripMenuItem.Text = "About";
+            // 
+            // configurationToolStripMenuItem
+            // 
+            this.configurationToolStripMenuItem.Name = "configurationToolStripMenuItem";
+            this.configurationToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.configurationToolStripMenuItem.Text = "Configuration";
             // 
             // mainMenu
             // 
@@ -141,6 +151,7 @@
         private System.Windows.Forms.ToolStripMenuItem closeMapToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem configurationToolStripMenuItem;
     }
 }
 
