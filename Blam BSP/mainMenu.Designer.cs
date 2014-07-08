@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("[sbsp] - Structure Binary Separation Plane");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("[sbsp] - Structure Binary Separation Plane");
             this.loadBSPButton = new System.Windows.Forms.Button();
             this.sbspTree = new System.Windows.Forms.TreeView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -55,12 +55,12 @@
             // 
             this.sbspTree.Location = new System.Drawing.Point(12, 27);
             this.sbspTree.Name = "sbspTree";
-            treeNode1.Checked = true;
-            treeNode1.Name = "mapSBSPRoot";
-            treeNode1.Tag = "sbsp";
-            treeNode1.Text = "[sbsp] - Structure Binary Separation Plane";
+            treeNode2.Checked = true;
+            treeNode2.Name = "mapSBSPRoot";
+            treeNode2.Tag = "sbsp";
+            treeNode2.Text = "[sbsp] - Structure Binary Separation Plane";
             this.sbspTree.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1});
+            treeNode2});
             this.sbspTree.Size = new System.Drawing.Size(260, 185);
             this.sbspTree.TabIndex = 1;
             // 
@@ -88,13 +88,13 @@
             // openMapToolStripMenuItem
             // 
             this.openMapToolStripMenuItem.Name = "openMapToolStripMenuItem";
-            this.openMapToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.openMapToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.openMapToolStripMenuItem.Text = "Open Map";
             // 
             // closeMapToolStripMenuItem
             // 
             this.closeMapToolStripMenuItem.Name = "closeMapToolStripMenuItem";
-            this.closeMapToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.closeMapToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.closeMapToolStripMenuItem.Text = "Close Map";
             // 
             // optionsToolStripMenuItem
