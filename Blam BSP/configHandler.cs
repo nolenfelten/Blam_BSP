@@ -7,6 +7,7 @@ using System.Xml;
 namespace Blam_BSP
 {
     //class configHandler
+    //http://msdn.microsoft.com/en-us/library/2tw134k3.aspx?cs-save-lang=1&cs-lang=csharp#code-snippet-1
     public class mapPathsSection : ConfigurationSection    
     {
         [ConfigurationProperty("main_menu_path", DefaultValue = "", IsRequired = true)]
