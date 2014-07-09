@@ -16,7 +16,7 @@ namespace Blam_BSP
         public mainMenu()
         {
             InitializeComponent();
-            if (String.Compare(System.Configuration.ConfigurationSettings.AppSettings["main_menu_path"], "") == 0 || String.Compare(System.Configuration.ConfigurationSettings.AppSettings["sp_shared_path"], "") == 0 || String.Compare(System.Configuration.ConfigurationSettings.AppSettings["mp_shared_path"], "") == 0)
+            if (String.Compare(ConfigurationManager.AppSettings["main_menu_path"], "") == 0 || String.Compare(ConfigurationManager.AppSettings["sp_shared_path"], "") == 0 || String.Compare(ConfigurationManager.AppSettings["mp_shared_path"], "") == 0)
             {
                 configEditor updateConfig = new configEditor();
                 updateConfig.ShowDialog();
@@ -30,7 +30,8 @@ namespace Blam_BSP
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            aboutBox aboutForm = new aboutBox();
+            aboutForm.ShowDialog();
         }
 
         private void configurationToolStripMenuItem_Click(object sender, EventArgs e)

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace Blam_BSP
 {
@@ -15,15 +16,16 @@ namespace Blam_BSP
         public configEditor()
         {
             InitializeComponent();
-            mainMenuPathTextBox.Text = System.Configuration.ConfigurationSettings.AppSettings["main_menu_path"];
-            singlePlayerSharedPathTextBox.Text = System.Configuration.ConfigurationSettings.AppSettings["sp_shared_path"];
-            multiplayerSharedPathTextBox.Text = System.Configuration.ConfigurationSettings.AppSettings["mp_shared_path"];
+            mainMenuPathTextBox.Text = ConfigurationManager.AppSettings["main_menu_path"];
+            singlePlayerSharedPathTextBox.Text = ConfigurationManager.AppSettings["sp_shared_path"];
+            multiplayerSharedPathTextBox.Text = ConfigurationManager.AppSettings["mp_shared_path"];
         }    
 
         private void loadMainMenuButton_Click(object sender, EventArgs e)
         {
             // Create an instance of the open file dialog box.
             OpenFileDialog loadMainMenuDialog = new OpenFileDialog();
+            loadMainMenuDialog.Title = "Select Main Menu map location";
 
             // Set filter options and filter index.
             loadMainMenuDialog.Filter = "Halo 2 Main Menu (.map)|mainmenu.map";
@@ -43,6 +45,7 @@ namespace Blam_BSP
         {
             // Create an instance of the open file dialog box.
             OpenFileDialog loadSinglePlayerSharedDialog = new OpenFileDialog();
+            loadSinglePlayerSharedDialog.Title = "Select Single Player Shared map location";
 
             // Set filter options and filter index.
             loadSinglePlayerSharedDialog.Filter = "Halo 2 SP Shared (.map)|single_player_shared.map";
@@ -62,6 +65,7 @@ namespace Blam_BSP
         {
             // Create an instance of the open file dialog box.
             OpenFileDialog loadMultiplayerSharedDialog = new OpenFileDialog();
+            loadMultiplayerSharedDialog.Title = "Select Shared map location";
 
             // Set filter options and filter index.
             loadMultiplayerSharedDialog.Filter = "Halo 2 Shared (.map)|shared.map";
@@ -81,9 +85,9 @@ namespace Blam_BSP
         {
             if(String.Compare(mainMenuPathTextBox.Text, "") != 0 || String.Compare(singlePlayerSharedPathTextBox.Text, "") != 0 || String.Compare(multiplayerSharedPathTextBox.Text, "") != 0)
             {
-                System.Configuration.ConfigurationSettings.AppSettings["main_menu_path"] = mainMenuPathTextBox.Text;
-                System.Configuration.ConfigurationSettings.AppSettings["sp_shared_path"] = singlePlayerSharedPathTextBox.Text;
-                System.Configuration.ConfigurationSettings.AppSettings["mp_shared_path"] = multiplayerSharedPathTextBox.Text;
+                ConfigurationManager.AppSettings["main_menu_path"] = mainMenuPathTextBox.Text;
+                ConfigurationManager.AppSettings["sp_shared_path"] = singlePlayerSharedPathTextBox.Text;
+                ConfigurationManager.AppSettings["mp_shared_path"] = multiplayerSharedPathTextBox.Text;
             }
             else
             {
@@ -95,9 +99,7 @@ namespace Blam_BSP
         {
             if (String.Compare(mainMenuPathTextBox.Text, "") != 0 || String.Compare(singlePlayerSharedPathTextBox.Text, "") != 0 || String.Compare(multiplayerSharedPathTextBox.Text, "") != 0)
             {
-                System.Configuration.ConfigurationSettings.AppSettings["main_menu_path"] = mainMenuPathTextBox.Text;
-                System.Configuration.ConfigurationSettings.AppSettings["sp_shared_path"] = singlePlayerSharedPathTextBox.Text;
-                System.Configuration.ConfigurationSettings.AppSettings["mp_shared_path"] = multiplayerSharedPathTextBox.Text;
+                //Do nothing
             }
             else
             {
