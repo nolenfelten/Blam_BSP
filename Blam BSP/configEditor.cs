@@ -85,12 +85,16 @@ namespace Blam_BSP
 
         private void saveConfigButton_Click(object sender, EventArgs e)
         {
-            if (String.Compare(mainMenuPathTextBox.Text, "") != 0 || String.Compare(singlePlayerSharedPathTextBox.Text, "") != 0 || String.Compare(multiplayerSharedPathTextBox.Text, "") != 0)
+            if (String.Compare(mainMenuPathTextBox.Text, "") != 0 && String.Compare(singlePlayerSharedPathTextBox.Text, "") != 0 && String.Compare(multiplayerSharedPathTextBox.Text, "") != 0)
             {
                 Properties.Settings.Default.mainMenuPath = mainMenuPathTextBox.Text;
                 Properties.Settings.Default.spSharedPath = singlePlayerSharedPathTextBox.Text;
                 Properties.Settings.Default.mpSharedPath = multiplayerSharedPathTextBox.Text;
                 Properties.Settings.Default.firstRun = "false";
+                //How to save settings: http://msdn.microsoft.com/en-us/library/vstudio/a65txexh(v=vs.100).aspx
+                Properties.Settings.Default.Save();
+                MessageBox.Show("Settings were updated successfully.");
+                this.Close();
             }
             else
             {
@@ -100,9 +104,9 @@ namespace Blam_BSP
 
         private void cancelConfigurationButton_Click(object sender, EventArgs e)
         {
-            if (String.Compare(mainMenuPathTextBox.Text, "") != 0 || String.Compare(singlePlayerSharedPathTextBox.Text, "") != 0 || String.Compare(multiplayerSharedPathTextBox.Text, "") != 0)
+            if (String.Compare(mainMenuPathTextBox.Text, "") != 0 && String.Compare(singlePlayerSharedPathTextBox.Text, "") != 0 && String.Compare(multiplayerSharedPathTextBox.Text, "") != 0)
             {
-                //Do nothing
+                this.Close();
             }
             else
             {

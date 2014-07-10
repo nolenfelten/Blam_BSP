@@ -16,13 +16,6 @@ namespace Blam_BSP
         public mainMenu()
         {
             InitializeComponent();
-            //Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-            //string mainMenuPathStr = ConfigurationManager.AppSettings["main_menu_path"];
-            //string singlePlayerSharedPathStr = ConfigurationManager.AppSettings["sp_shared_path"];
-            //string multiplayerSharedPathStr = ConfigurationManager.AppSettings["mp_shared_path"];
-            //if (String.Compare(ConfigurationManager.AppSettings["main_menu_path"], "") == 0 || String.Compare(ConfigurationManager.AppSettings["sp_shared_path"], "") == 0 || String.Compare(ConfigurationManager.AppSettings["mp_shared_path"], "") == 0)
-            //string firstRun = ConfigurationManager.AppSettings["first_run"];
-            //if (firstRun.Equals("true"))
             if (Properties.Settings.Default.firstRun.Equals("true"))
             {
                 configEditor updateConfig = new configEditor();
