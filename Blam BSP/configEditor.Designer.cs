@@ -31,14 +31,14 @@
             this.mainMenuPathLabel = new System.Windows.Forms.Label();
             this.singlePlayerSharedPathLabel = new System.Windows.Forms.Label();
             this.multiplayerSharedMapPathLabel = new System.Windows.Forms.Label();
-            this.mainMenuPathTextBox = new System.Windows.Forms.TextBox();
-            this.singlePlayerSharedPathTextBox = new System.Windows.Forms.TextBox();
             this.multiplayerSharedPathTextBox = new System.Windows.Forms.TextBox();
             this.saveConfigButton = new System.Windows.Forms.Button();
             this.loadMainMenuButton = new System.Windows.Forms.Button();
             this.loadSinglePlayerSharedButton = new System.Windows.Forms.Button();
             this.loadMultiplayerSharedMapButton = new System.Windows.Forms.Button();
             this.cancelConfigurationButton = new System.Windows.Forms.Button();
+            this.singlePlayerSharedPathTextBox = new System.Windows.Forms.TextBox();
+            this.mainMenuPathTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // mainMenuPathLabel
@@ -68,29 +68,15 @@
             this.multiplayerSharedMapPathLabel.TabIndex = 0;
             this.multiplayerSharedMapPathLabel.Text = "Shared Path:";
             // 
-            // mainMenuPathTextBox
-            // 
-            this.mainMenuPathTextBox.Location = new System.Drawing.Point(15, 25);
-            this.mainMenuPathTextBox.Name = "mainMenuPathTextBox";
-            this.mainMenuPathTextBox.ReadOnly = true;
-            this.mainMenuPathTextBox.Size = new System.Drawing.Size(395, 20);
-            this.mainMenuPathTextBox.TabIndex = 1;
-            // 
-            // singlePlayerSharedPathTextBox
-            // 
-            this.singlePlayerSharedPathTextBox.Location = new System.Drawing.Point(16, 64);
-            this.singlePlayerSharedPathTextBox.Name = "singlePlayerSharedPathTextBox";
-            this.singlePlayerSharedPathTextBox.ReadOnly = true;
-            this.singlePlayerSharedPathTextBox.Size = new System.Drawing.Size(394, 20);
-            this.singlePlayerSharedPathTextBox.TabIndex = 1;
-            // 
             // multiplayerSharedPathTextBox
             // 
+            this.multiplayerSharedPathTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::Blam_BSP.Properties.Settings.Default, "mpSharedPath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.multiplayerSharedPathTextBox.Location = new System.Drawing.Point(16, 103);
             this.multiplayerSharedPathTextBox.Name = "multiplayerSharedPathTextBox";
             this.multiplayerSharedPathTextBox.ReadOnly = true;
             this.multiplayerSharedPathTextBox.Size = new System.Drawing.Size(394, 20);
             this.multiplayerSharedPathTextBox.TabIndex = 1;
+            this.multiplayerSharedPathTextBox.Text = global::Blam_BSP.Properties.Settings.Default.mpSharedPath;
             // 
             // saveConfigButton
             // 
@@ -142,6 +128,26 @@
             this.cancelConfigurationButton.Text = "Cancel";
             this.cancelConfigurationButton.UseVisualStyleBackColor = true;
             this.cancelConfigurationButton.Click += new System.EventHandler(this.cancelConfigurationButton_Click);
+            // 
+            // singlePlayerSharedPathTextBox
+            // 
+            this.singlePlayerSharedPathTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::Blam_BSP.Properties.Settings.Default, "spSharedPath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.singlePlayerSharedPathTextBox.Location = new System.Drawing.Point(16, 64);
+            this.singlePlayerSharedPathTextBox.Name = "singlePlayerSharedPathTextBox";
+            this.singlePlayerSharedPathTextBox.ReadOnly = true;
+            this.singlePlayerSharedPathTextBox.Size = new System.Drawing.Size(394, 20);
+            this.singlePlayerSharedPathTextBox.TabIndex = 1;
+            this.singlePlayerSharedPathTextBox.Text = global::Blam_BSP.Properties.Settings.Default.spSharedPath;
+            // 
+            // mainMenuPathTextBox
+            // 
+            this.mainMenuPathTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::Blam_BSP.Properties.Settings.Default, "mainMenuPath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.mainMenuPathTextBox.Location = new System.Drawing.Point(15, 25);
+            this.mainMenuPathTextBox.Name = "mainMenuPathTextBox";
+            this.mainMenuPathTextBox.ReadOnly = true;
+            this.mainMenuPathTextBox.Size = new System.Drawing.Size(395, 20);
+            this.mainMenuPathTextBox.TabIndex = 1;
+            this.mainMenuPathTextBox.Text = global::Blam_BSP.Properties.Settings.Default.mainMenuPath;
             // 
             // configEditor
             // 

@@ -15,10 +15,12 @@ namespace Blam_BSP
     {
         public configEditor()
         {
+            //Read from the current configuration
+            //Binding a design property to a setting: http://msdn.microsoft.com/en-us/library/wabtadw6(v=vs.85)
             InitializeComponent();
-            mainMenuPathTextBox.Text = ConfigurationManager.AppSettings["main_menu_path"];
-            singlePlayerSharedPathTextBox.Text = ConfigurationManager.AppSettings["sp_shared_path"];
-            multiplayerSharedPathTextBox.Text = ConfigurationManager.AppSettings["mp_shared_path"];
+            mainMenuPathTextBox.Text = Properties.Settings.Default.mainMenuPath;
+            singlePlayerSharedPathTextBox.Text = Properties.Settings.Default.spSharedPath;
+            multiplayerSharedPathTextBox.Text = Properties.Settings.Default.mpSharedPath;
         }    
 
         private void loadMainMenuButton_Click(object sender, EventArgs e)
@@ -83,11 +85,12 @@ namespace Blam_BSP
 
         private void saveConfigButton_Click(object sender, EventArgs e)
         {
-            if(String.Compare(mainMenuPathTextBox.Text, "") != 0 || String.Compare(singlePlayerSharedPathTextBox.Text, "") != 0 || String.Compare(multiplayerSharedPathTextBox.Text, "") != 0)
+            if (String.Compare(mainMenuPathTextBox.Text, "") != 0 || String.Compare(singlePlayerSharedPathTextBox.Text, "") != 0 || String.Compare(multiplayerSharedPathTextBox.Text, "") != 0)
             {
-                ConfigurationManager.AppSettings["main_menu_path"] = mainMenuPathTextBox.Text;
-                ConfigurationManager.AppSettings["sp_shared_path"] = singlePlayerSharedPathTextBox.Text;
-                ConfigurationManager.AppSettings["mp_shared_path"] = multiplayerSharedPathTextBox.Text;
+                Properties.Settings.Default.mainMenuPath = mainMenuPathTextBox.Text;
+                Properties.Settings.Default.spSharedPath = singlePlayerSharedPathTextBox.Text;
+                Properties.Settings.Default.mpSharedPath = multiplayerSharedPathTextBox.Text;
+                Properties.Settings.Default.firstRun = "false";
             }
             else
             {
