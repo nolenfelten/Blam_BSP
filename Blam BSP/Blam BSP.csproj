@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.DirectX.Direct3DX, Version=1.0.2909.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2911.0\Microsoft.DirectX.Direct3DX.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -57,20 +62,53 @@
     <Compile Include="bspViewer.Designer.cs">
       <DependentUpon>bspViewer.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChunkCloning\ChunkAdder.cs" />
+    <Compile Include="ChunkCloning\MetaBuilder.cs" />
+    <Compile Include="ChunkCloning\MetaSplitter.cs" />
     <Compile Include="configEditor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="configEditor.Designer.cs">
       <DependentUpon>configEditor.cs</DependentUpon>
     </Compile>
+    <Compile Include="H2MetaContainers\coll.cs" />
+    <Compile Include="H2MetaContainers\hlmt.cs" />
+    <Compile Include="H2MetaContainers\ligh.cs" />
+    <Compile Include="H2MetaContainers\sbsp.cs" />
+    <Compile Include="H2MetaContainers\shad.cs" />
+    <Compile Include="H2MetaContainers\sky.cs" />
+    <Compile Include="H2MetaContainers\ugh!.cs" />
+    <Compile Include="loadSBSP.cs" />
     <Compile Include="mainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="mainMenu.Designer.cs">
       <DependentUpon>mainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Map\BitmapLibraryLayout.cs" />
+    <Compile Include="Map\BSPContainer.cs" />
+    <Compile Include="Map\BSPInfo.cs" />
+    <Compile Include="Map\FileNamesInfo.cs" />
+    <Compile Include="Map\IndexHeaderInfo.cs" />
+    <Compile Include="Map\Map.cs" />
+    <Compile Include="Map\MapHeaderInfo.cs" />
+    <Compile Include="Map\MiscFunctions.cs" />
+    <Compile Include="Map\ObjectIndexInfo.cs" />
+    <Compile Include="Map\StringsInfo.cs" />
+    <Compile Include="Map\UnicodeTableReader.cs" />
+    <Compile Include="Meta\Meta.cs" />
+    <Compile Include="Meta\MetaScanner.cs" />
+    <Compile Include="Meta\TagInterface.cs" />
+    <Compile Include="Plugins\IFPHashMap.cs" />
+    <Compile Include="Plugins\IFPIO.cs" />
+    <Compile Include="Plugins\MakeIFP.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RawData\BSPModel.cs" />
+    <Compile Include="RawData\ParsedBitmap.cs" />
+    <Compile Include="RawData\ParsedModel.cs" />
+    <Compile Include="RawData\PRTMModel.cs" />
+    <Compile Include="RawData\RawData.cs" />
     <EmbeddedResource Include="aboutBox.resx">
       <DependentUpon>aboutBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -101,6 +139,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="RawData\obj_spec.pdf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
